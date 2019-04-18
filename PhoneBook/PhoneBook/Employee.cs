@@ -1,6 +1,10 @@
-﻿namespace PhoneBookTests
+﻿namespace PhoneBook
 {
-    using PhoneBook;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
 
     public class Employee
     {
@@ -13,15 +17,15 @@
             this.InternalPhone = internalPhone;
         }
 
-        public string Name { get; private set; }
+        public string Name { get; }
 
-        public string Surname { get; private set; }
+        public string Surname { get; }
 
-        public int BadgeID { get; private set; }
+        public int BadgeID { get; }
 
-        public Locations Department { get; private set; }
+        public Locations Department { get; }
 
-        public string InternalPhone { get; private set; }
+        public string InternalPhone { get; }
 
         public string PrintEmployeeBasicInfo()
         {
@@ -30,7 +34,7 @@
 
         public string PrintEmployeeAdvancedInfo()
         {
-            return $"Name: {Name} Surname: {Surname} BadgeID: {BadgeID} Location: {Department} Phone: {InternalPhone}";
+            return $"Name: {Name} \nSurname: {Surname} \nBadgeID: {BadgeID} \nLocation: {Department} \nPhone: {InternalPhone} \n\n";
         }
     }
 }
